@@ -1,7 +1,8 @@
 import java.util.Scanner;
-
+//hesap makinesi sınıfı oluşturup metodları bu sınıfın içerisinde yazıyoruz
 public class gelismisHesapMakinesi {
 
+    //toplama işlemi metodu
     static void plus() {
         Scanner scan = new Scanner(System.in);
         int number, result=0, i=1;
@@ -16,6 +17,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç : "+result);
     }
 
+    //çıkarma işlemi metodu
     static void minus() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz? :");
@@ -34,6 +36,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç : "+result);
     }
 
+    //çarpma işlemi metodu
     static void times() {
         Scanner scan = new Scanner(System.in);
         int number, result = 1, i = 1;
@@ -55,6 +58,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç : " + result);
     }
 
+    //bölme işlemi metodu
     static void division() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz? :");
@@ -73,6 +77,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç :" + result);
     }
 
+    //üs alma işlemi metodu
     static void power() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Taban değeri giriniz :");
@@ -88,6 +93,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç : " + result);
     }
 
+    //faktöriyel hesaplama metodu
     static void factorial() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Sayı giriniz :");
@@ -101,6 +107,7 @@ public class gelismisHesapMakinesi {
         System.out.println("Sonuç : " + result);
     }
 
+    //mod alma metodu
     static void mod() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Modunu almak istediğiniz sayıyı giriniz : ");
@@ -113,6 +120,7 @@ public class gelismisHesapMakinesi {
 
     }
 
+    //dikdörtgenin alanını hesaplama metodu
     static void rectArea() {
         Scanner scan = new Scanner(System.in);
         int height, width;
@@ -127,10 +135,13 @@ public class gelismisHesapMakinesi {
     }
 
     public static void main(String[] args) {
+
+        //tarayıcı sınıfımızı ve select değişkenini ekledik
         Scanner inpt = new Scanner(System.in);
-        int select;
+        int select=1;
         Scanner close;
 
+        //burada bir menu değişkeni oluşturup, kullanıcıya arayüzde menü olarak sunacağız
         String menu = "1- Toplama İşlemi\n"
                 + "2- Çıkarma İşlemi \n"
                 + "3- Çarpma işlemi\n"
@@ -143,7 +154,8 @@ public class gelismisHesapMakinesi {
 
         System.out.println(menu);
 
-        while (true){
+        //0 seçilirse program sonlandırılsın, değilse switch durumu çalıştırılsın
+        while (select !=0){
 
             System.out.print("Bir işlem seçiniz :");
             select =inpt.nextInt();
