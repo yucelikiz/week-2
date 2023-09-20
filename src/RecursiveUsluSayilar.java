@@ -13,7 +13,7 @@ public class RecursiveUsluSayilar {
 
         //sonucu 1e eşitleyerek üssün sıfır aldığı durumlarda otomatik 1 sonucunu veriyoruz, aksi takdirde for döngüsü üs sayısı kadar işlem yapıyor.
         int result = 1;
-        for(;exponent != 0 ; exponent--){
+        for(;exponent > 0 ; exponent--){
             result *= base;
         }
         return result;
