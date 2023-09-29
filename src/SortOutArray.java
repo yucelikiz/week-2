@@ -12,6 +12,7 @@ public class SortOutArray {
             System.out.print(i+1+". eleman : ");
             list[i] = scan.nextInt();
         }
+        // Sort komutu ile elemanlar küçükten büyüğe sıralanır.
         Arrays.sort(list);
         System.out.println("\nThe sorted array is :");
         for (int num : list) {
